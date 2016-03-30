@@ -25,9 +25,9 @@ public class HibernateTest {
 		
 		user.getVehicle().add(vehicle);
 		user.getVehicle().add(vehicle2);
-		vehicle.getUserList().add(user);
-		
-		vehicle2.getUserList().add(user);
+//		vehicle.getUserList().add(user);
+//		
+//		vehicle2.getUserList().add(user);
 
 //		user.setAddress("first user's address");
 //		user.setJoinedDate(new Date());
@@ -47,6 +47,7 @@ public class HibernateTest {
 		addr1.setCity("first city");
 		addr1.setState("first state");
 		addr1.setPincode("first pincode");
+//		
 		
 //		user.getListAddress().add(addr);
 //		user.getListAddress().add(addr1);
@@ -59,9 +60,9 @@ public class HibernateTest {
 		SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		session.save(user);
-		session.save(vehicle);
-		session.save(vehicle2);
+		session.persist(user);
+//		session.save(vehicle);
+//		session.save(vehicle2);
 
 //		session.save(user2);
 		session.getTransaction().commit();

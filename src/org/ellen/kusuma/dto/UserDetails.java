@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder.Case;
 
 import org.hibernate.annotations.CollectionId;
 import org.hibernate.annotations.GenericGenerator;
@@ -19,8 +20,7 @@ public class UserDetails {
 
 	private int userId;
 	private String userName;
-	@ManyToMany
-
+	@OneToMany(cascade=CascadeType.PERSIST)
 	private Collection<Vehicle> vehicle= new ArrayList<Vehicle>();
 	
 //	@ElementCollection(fetch=FetchType.EAGER)
