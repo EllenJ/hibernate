@@ -50,10 +50,12 @@
 
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">create</property>
-
+		
         <!-- Names the annotated entity class -->
         <mapping class="org.ellen.kusuma.dto.UserDetails"/>
         <mapping class="org.ellen.kusuma.dto.Vehicle"/>
+        <mapping class="org.ellen.kusuma.dto.TwoWheelar"/>
+        <mapping class="org.ellen.kusuma.dto.FourWheeler"/>
 
     </session-factory>
 

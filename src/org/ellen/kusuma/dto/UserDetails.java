@@ -20,8 +20,8 @@ public class UserDetails {
 
 	private int userId;
 	private String userName;
-	@OneToMany(cascade=CascadeType.PERSIST)
-	private Collection<Vehicle> vehicle= new ArrayList<Vehicle>();
+//	@OneToMany(cascade=CascadeType.PERSIST)
+//	private Collection<Vehicle> vehicle= new ArrayList<Vehicle>();
 	
 //	@ElementCollection(fetch=FetchType.EAGER)
 //	@JoinTable(name="USER_ADDRESS",
@@ -77,12 +77,12 @@ public class UserDetails {
 	public int getUserId() {
 		return userId;
 	}
-public Collection<Vehicle> getVehicle() {
-		return vehicle;
-	}
-	public void setVehicle(Collection<Vehicle> vehicle) {
-		this.vehicle = vehicle;
-	}
+//public Collection<Vehicle> getVehicle() {
+//		return vehicle;
+//	}
+//	public void setVehicle(Collection<Vehicle> vehicle) {
+//		this.vehicle = vehicle;
+//	}
 	//	public Address getHomeAddress() {
 //		return homeAddress;
 //	}
